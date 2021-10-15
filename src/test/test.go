@@ -14,7 +14,52 @@ import (
 )
 
 func main() {
-	Greet()
+	MapTest()
+}
+
+func MapTest() {
+	var map1 map[string]int = map[string]int{"first": 1, "second": 2}
+	map2 := make(map[string]string)
+	fmt.Println(map1, map2)
+	fmt.Println(map1["first"])
+
+	val, ok := map1["first"]
+	println(val, ok)
+	val1, ok := map1["sec"]
+	println(val1, ok)
+}
+
+func SliceTest() {
+	sl1 := []int{1, 2, 3, 4}
+	var sl2 = make([]int, 3)
+	sl2 = append(sl2, 1)
+	sl2 = append(sl2, 2)
+	sl2 = append(sl2, 3)
+	var sl3 []int = []int{1, 2, 3}
+
+	fmt.Println(sl1, sl2, sl3)
+
+	//This will cause a panic
+	// panic: runtime error: index out of range [1] with length 0
+	var sl4 []int
+	fmt.Println(sl4[1])
+
+}
+
+func ArrayTest() {
+	var arr1 [3]int
+	arr1[0] = 1
+	arr1[1] = 2
+	arr1[2] = 3
+	fmt.Println(arr1)
+
+	arr2 := [3]int{2, 3, 4}
+	fmt.Println(arr2)
+	fmt.Println(arr2[1:])
+
+	var arr3 [3]int = [3]int{1, 2, 3}
+	fmt.Println((arr3))
+
 }
 
 func Greet() {
