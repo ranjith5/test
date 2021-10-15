@@ -37,6 +37,24 @@ func MapTest() {
 		fmt.Println("2---for loop...")
 		fmt.Println(key)
 	}
+
+	//deleting keys from maps
+	delete(map1, "first")
+	fmt.Println(map1)
+
+	map3 := make(map[int]int)
+	map3[1] = 1
+	map3[1] = 1
+	map3[1] = 1
+	fmt.Println(map3)
+
+	map4 := make(map[int]int)
+	map4[1] = 1
+	map4[2] = 2
+	map4[3] = 3
+	fmt.Println(map4)
+	delete(map4, 1)
+	fmt.Println(map4)
 }
 
 func SliceTest() {
