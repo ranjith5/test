@@ -27,6 +27,16 @@ func MapTest() {
 	println(val, ok)
 	val1, ok := map1["sec"]
 	println(val1, ok)
+
+	for key, val := range map1 {
+		fmt.Println("for loop...")
+		fmt.Println(key, val)
+	}
+
+	for key := range map1 {
+		fmt.Println("2---for loop...")
+		fmt.Println(key)
+	}
 }
 
 func SliceTest() {
